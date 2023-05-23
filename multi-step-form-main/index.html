@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Multi-step form</title>
+
+</head>
+<body>
+  <main>
+    <div class="steps">
+      <button id="step1" class="step">1</button>
+      <button id="step2" class="step">2</button>
+      <button id="step3" class="step">3</button>
+      <button id="step4" class="step">4</button>
+    </div>
+
+    <!-- Section 1 -->
+
+    <section class="section section-one" id="sectionOne">
+      <div class="text">
+        <h2>Personal Info</h2>
+        <p>Please provide your name, email address and phone number</p>
+      </div>
+      <div class="form-div">
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="full-name" placeholder=" e.g. Sthephen King">
+          <label for="email">Email</label>
+          <input type="text" id="email"  placeholder=" e.g. stephenking@gmail.com">
+          <label for="phone">Phone Numebr</label>
+          <input type="text" id="phone"  placeholder=" e.g. +1 458 4512">
+        </form>
+      </div>
+
+      <div class="footer-div">
+        <button onclick="getPersonalInfo()" id="next-btn-one" class="next-btn btn" type="button">Next Step</button>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+
+    <section class="section section-two" id="sectionTwo">
+      <div class="text">
+        <h2>Select your plan</h2>
+        <p>You have the option of monthly or yearly billing</p>
+      </div>
+
+      <div class="options">
+        <button onclick="optionOne()" type="button" id="arcadeBtn" class="option arcade">
+          <img src="./assets/images/icon-arcade.svg">
+          <div>
+            <h3 id="arcadeSub">Arcade <p id="arcadePrice">$<span id="arcSpan">9/mo</span></p></h3>
+          </div>
+        </button>
+        <button onclick="optionTwo()" id="advancedBtn" class="option advanced">
+          <img src="./assets/images/icon-advanced.svg">
+          <div>
+            <h3 id="advancedSub">Advanced <p id="advancedPrice">$<span id="advSpan">12/mo</span></p></h3>
+          </div>
+        </button>
+        <button onclick="optionThree()" id="proBtn" class="option pro">
+          <img src="./assets/images/icon-pro.svg">
+          <div>
+            <h3 id="proSub">Pro <p id="proPrice">$<span id="proSpan">15/mo</span></p></h3>
+          </div>
+        </button>
+      </div>
+
+      <div class="month-year">
+        <button id="monthly" onclick="monthlyPrice()" >Monthly</button>
+        
+        <button id="yearly" onclick="yearlyPrice()">Yearly</button>
+      </div>
+
+      <div class="footer-two">
+        <button onclick="getGoBack()" id="goBackBtnOne" class="btn">Go back</button>
+        <button onclick="getSubscription()" class="next-btn btn" type="button" id="next">Next Step</button>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+
+    <section class="section section-three" id="sectionThree">
+      <div class="text">
+        <h2>Pick add-ons</h2>
+        <p>Add-ons help expand your gaming experience</p>
+      </div>
+
+      <div class="options">
+        <div class="option opt-sect-3">
+          <input onclick="isChecked()" type="checkbox" id="checkbox-one">
+          <div>
+            <h3>Online service</h3>
+            <p>Access to multiplayer games</p>
+          </div>
+          <h4 id="h4-arc">+$1/mo</h4>
+        </div>
+        <div class="option opt-sect-3">
+          <input onclick="isChecked()" type="checkbox" id="checkbox-two">
+          <div>
+            <h3>Larger storage</h3>
+            <p>Extra 1TB of cloud save</p>
+          </div>
+          <h4 id="h4-adv">+$2/mo</h4>
+        </div>
+        <div class="option opt-sect-3">
+          <input onclick="isChecked()" type="checkbox" id="checkbox-three">
+          <div>
+            <h3>Customizable Profile</h3>
+            <p>Custom theme on your profile</p>
+          </div>
+          <h4 id="h4-pro">+$2/mo</h4>
+        </div>
+      </div>
+
+      <div class="footer-two">
+        <button onclick="getGoBack()" id="goBackBtnTwo" class="btn">Go back</button>
+        <button onclick="getAddons()" id="addonsBtn" class="next-btn btn" type="button">Next Step</button>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+
+    <section class="section section-four" id="sectionFour">
+      <div class="text">
+        <h2>Finishing up</h2>
+        <p>Double-check everything looks OK before confirming.</p>
+      </div>
+
+      <div class="finishing-up">
+        <div class="finishing">
+          <div>
+            <h3 id="checkoutOption">Arcade</h3>
+            <button>Change</button>
+          </div>
+          <!-- <h4 id="checkoutPrice">$9/mo</h4> -->
+        </div>
+        <hr/>
+        <div class="finishing">
+          <h3>Online service</h3>
+          <h4 id="checkoutService">$0/mo</h4>
+        </div>
+        <div class="finishing">
+          <h3>Local storage</h3>
+          <h4 id="checkoutStorage">$0/mo</h4>
+        </div>
+        <div class="finishing">
+          <h3>Customizable Profile</h3>
+          <h4 id="customizableProfile">$0/mo</h4>
+        </div>
+        <div class="finishing">
+          <h3>Total (per month/year)</h3>
+          <h4 id="checkoutTotal">$<span id="totalSpan">9</span></h4>
+        </div>
+      </div>
+
+      <div class="footer-two">
+        <button onclick="getGoBack()" id="goBackBtnThree" class="btn">Go back</button>
+        <button id="finishPurchase" onclick="getFinishPurchase()" class="next-btn btn" type="button">Next Step</button>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+
+    <section class="section section-five"  id="sectionFive">
+      <div class="thank-you">
+        <img src="./assets/images/icon-thank-you.svg" alt="thank you image">
+        <h2>Thank you!</h2>
+        <p>
+          Thanks for confirming your subscription! We hope you have fun 
+          using our platform. If you ever need support, please feel free 
+          to email us at support@loremgaming.com.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!--  Step 5 end -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Toni Jokić</a>.
+  </div> -->
+  <script src="script.js"></script>
+</body>
+</html>

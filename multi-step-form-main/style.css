@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: auto;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./assets/images/bg-sidebar-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+}
+
+p, label{
+    color: hsl(231, 11%, 63%);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+input{
+    border-radius: 5px;
+    padding-left: 1rem;
+    color: hsl(230, 5%, 56%);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color:hsl(227, 42%, 91%);
+}
+
+button{
+    font-weight: 600;
+    border-radius: 7px;
+    border: none;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 2rem;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 42vh; */
+    width: 80vw;
+    border: 1px solid black;
+    padding-bottom: 2rem;
+    height: 35rem;
+    position: absolute;
+    top: 15%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+h2{
+    margin-top: -1rem;
+}
+
+/* Section one */
+
+.section-one{
+    visibility: visible;
+}
+
+.steps{
+    position: absolute;
+    top: 7%;
+}
+
+#step1{
+    background-color: hsl(229, 24%, 87%);
+}
+
+.step{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    border: 1px solid hsl(229, 24%, 87%);
+    color: hsl(229, 24%, 87%);
+    background-color: transparent;
+    color: hsl(213, 96%, 18%);
+}
+
+.text{
+    width: 70vw;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    padding-top: 2rem;
+}
+
+.text p{
+    width: 60vw;
+    margin-top: 1rem;
+}
+
+.form-div form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-div form input{
+    width: 70vw;
+    height: 40px;
+    margin-bottom: 1rem;
+    border: 1px solid gray;
+}
+
+.footer-div{
+    width: 70vw;
+    display: flex;
+    justify-content: end;
+}
+.btn{
+    height: 35px;
+    width: 100px;
+    border: 1px solid gray;
+}
+
+.next-btn{
+    background-color:  hsl(213, 96%, 18%);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 7px;
+    border: none;
+}
+
+
+.next-btn:hover, .step:hover{
+    cursor: pointer;
+    background-color: hsl(243, 100%, 62%);
+}
+
+/* Section two */
+
+.section-two{
+    visibility: hidden;
+}
+
+.option{
+    width:70vw;
+    height: 70px;
+    display: flex;
+    background-color: hsl(206, 94%, 87%);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    text-align: left;
+}
+
+.option:hover{
+    cursor: pointer;
+    border: 2px solid hsl(213, 96%, 18%);
+}
+
+.option img{
+    max-height: 40px;
+    margin-left: 1rem;
+}
+
+.month-year{
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    background-color: rgb(190, 189, 189);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.month-year button{
+    padding: 0.3rem;
+}
+
+.footer-two{
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Section three */
+
+.section-three{
+    visibility: hidden;
+}
+
+ .opt-sect-3{
+    padding: 1rem;
+    font-size: 0.8rem;
+    justify-content: left;
+    align-items: center;
+ }
+
+ .opt-sect-3 > h4{
+    margin-left: auto;
+ }
+
+ /* Section four */
+
+ .section-four{
+    visibility: hidden;
+ }
+
+.finishing-up{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.finishing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Section 5 */
+
+.section-five{
+    visibility: hidden;
+}
+
+.thank-you{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.thank-you img{
+    max-height: 70px;
+    margin-bottom: 1rem;
+}
